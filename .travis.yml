@@ -1,5 +1,12 @@
 language: node_js
 node_js:
 - '0.10'
-
 before_install: npm install -g mocha
+deploy:
+  provider: s3
+  access_key_id: AKIAJRJFYD64JIVPLKWQ
+  secret_access_key:
+    secure: ZZ6clZe0M9t6IfDZhEZBrlKW7dNhnLk8/FOttJPel05HG9q3L2MAtrMiqBdRYy89iHsmCKH/hSc9BQK+jTHVGqqnXJnR+GD4fOxQPTaB9ZaMbC/y/hlTnDPbT1MWDz6+zV8fQeJGBIlzgR15LxTmqoJA03M+UGl6m7tkuvIOBfA=
+  bucket: deploy-weeia
+ # on:
+ # 	tags: true
