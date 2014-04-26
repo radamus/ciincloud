@@ -7,7 +7,7 @@ module.exports.discount = function(amount, rates){
 		var treshold = parseInt(key);
 		var discountPercentage = rates[key];
 		if(amount > treshold){
-			discount = amount * discountPercentage * 0.01;
+			discount = Number(amount * discountPercentage * 0.01).toFixed(2);
 		}
 	}
 

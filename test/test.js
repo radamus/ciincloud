@@ -12,17 +12,24 @@ describe("discount Calculator", function(){
 
 describe("discount function", function(){
 	var rates;
-	var amount;
+	
 	beforeEach(function(){
 		rates = {"1000":5}
-		amount = 999;
+		
 
 		});
 
-	it("discount should be 0 below single treshold ", function(){
-		
+	it("discount should be 0  ", function(){
+		var amount = 999;
 		var discount = discountCalculator.discount(amount, rates);
 		assert.equal(discount, 0, discount + "");
+
+	});
+
+	it("discount should be 50,05  ", function(){
+		var amount = 1001;
+		var discount = discountCalculator.discount(amount, rates);
+		assert.equal(discount, 50.05, discount + "");
 
 	});
 });
