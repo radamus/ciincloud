@@ -11,10 +11,16 @@ describe("discount Calculator", function(){
 });
 
 describe("discount function", function(){
-	it("discount should be 0% below single treshold ", function(){
-		var rates = {"1000":5}
-		var amount = 999;
+	var rates;
+	var amount;
+	beforeEach(function(){
+		rates = {"1000":5}
+		amount = 999;
 
+		});
+
+	it("discount should be 0 below single treshold ", function(){
+		
 		var discount = discountCalculator.discount(amount, rates);
 		assert.equal(discount, 0, discount + "");
 
