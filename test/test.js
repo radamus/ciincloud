@@ -6,7 +6,7 @@ var discountCalculator = require("../discount");
 
 describe("discount Calculator", function(){
 	it("should have discount function", function(){
-		assert.equal(discountCalculator.discount instanceof Function, true, "discountCalculator.discount instanceof Function"); 		
+		assert.equal(discountCalculator.discount instanceof Function, true, "typeof discount: "  + typeof discountCalculator.discount); 		
 	});
 });
 
@@ -18,6 +18,12 @@ describe("discount function", function(){
 		
 
 		});
+
+	it("discount should return 0 by default  ", function(){		
+		var discount = discountCalculator.discount();
+		assert.equal(discount, 0, discount + "");
+
+	});
 
 	it("discount should be 0  ", function(){
 		var amount = 999;

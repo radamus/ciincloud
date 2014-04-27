@@ -1,4 +1,6 @@
 module.exports.discount = function(amount, rates){
+	amount = amount ? amount : 0;
+	rates = rates ? rates : {};
 	var discount = 0;
 	var tresholds = Object.keys(rates);
 
